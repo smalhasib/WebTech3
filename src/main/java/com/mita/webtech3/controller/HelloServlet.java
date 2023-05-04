@@ -27,7 +27,6 @@ public class HelloServlet extends HttpServlet {
         } catch (HibernateException e) {
             throw new RuntimeException(e);
         }
-        response.setContentType("text/html");
 
         // Hello
         PrintWriter out = response.getWriter();

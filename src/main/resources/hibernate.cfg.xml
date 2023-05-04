@@ -3,15 +3,15 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name = "hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
-        <property name = "hibernate.connection.username">smah</property>
-        <property name = "hibernate.connection.password">Jinxed718</property>
-        <property name = "hbm2ddl.auto">update</property>
-        <property name = "show_sql">true</property>
-        <property name = "format_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+        <property name="hibernate.connection.username">smah</property>
+        <property name="hibernate.connection.password">Jinxed718</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
         <!-- List of XML mapping files -->
-        <mapping class="com.mita.webtech3.Customer"></mapping>
+        <mapping class="com.mita.webtech3.model.User"></mapping>
     </session-factory>
 </hibernate-configuration>

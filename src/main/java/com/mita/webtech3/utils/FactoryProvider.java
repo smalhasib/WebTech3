@@ -1,4 +1,4 @@
-package com.mita.webtech3;
+package com.mita.webtech3.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

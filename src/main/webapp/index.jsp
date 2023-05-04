@@ -2,13 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Home</title>
 </head>
+
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
-<a href="user-servlet">User Servlet</a>
+<%@ include file="/layout/header.jsp" %>
+<a href="login">Login</a>
 </body>
 </html>

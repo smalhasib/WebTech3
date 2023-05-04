@@ -13,5 +13,6 @@
         <property name="format_sql">true</property>
         <!-- List of XML mapping files -->
         <mapping class="com.mita.webtech3.model.User"></mapping>
+        <mapping class="com.mita.webtech3.model.Course"></mapping>
     </session-factory>
 </hibernate-configuration>

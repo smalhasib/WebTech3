@@ -1,6 +1,10 @@
 package com.mita.webtech3.controller;
 
+import com.mita.webtech3.db.CourseDao;
 import com.mita.webtech3.db.UserDao;
+import com.mita.webtech3.model.User;
+import com.mita.webtech3.utils.Department;
+import com.mita.webtech3.utils.UserType;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,8 +26,12 @@ public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println("Working ....");
         try {
-            UserDao dao = UserDao.getInstance();
-            dao.loginUser("E1", "E1");
+            CourseDao dao = CourseDao.getInstance();
+            UserDao userDao = UserDao.getInstance();
+            User user = User.builder().id(2).username("teacher1").email("e2").password("p2").department(Department.CSE).role(UserType.TEACHER).build();
+//            Course course = Course.builder().name("Web Tech").teacher(user).department(Department.CSE).build();
+//            dao.addCourse(course);
+            dao.loadCoursesByTeacherId(user);
         } catch (HibernateException e) {
             throw new RuntimeException(e);
         }

@@ -8,6 +8,9 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import java.util.List;
 
 public class UserDao {
 
@@ -25,8 +28,7 @@ public class UserDao {
         return instance;
     }
 
-    public void createUser(String email, String password, UserType role) {
-        User user = User.builder().email(email).password(password).role(role).build();
+    public void createUser(User user) {
         try {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
@@ -38,18 +40,49 @@ public class UserDao {
         }
     }
 
-    public void loginUser(String email, String password) {
+    public User loginUser(String email, String password) {
+        User user;
         try {
             Session session = sessionFactory.openSession();
             TypedQuery<User> query = session.createQuery("SELECT u FROM User u WHERE u.email = :email AND u.password = :password", User.class);
             query.setParameter("email", email);
             query.setParameter("password", password);
-            User user = query.getSingleResult();
+            user = query.getSingleResult();
             System.out.println(user);
             session.close();
         } catch (HibernateException e) {
             throw new RuntimeException(e);
         }
+        return user;
     }
 
+    public User userById(int userId) {
+        User user;
+        try {
+            Session session = sessionFactory.openSession();
+            TypedQuery<User> query = session.createQuery("SELECT u FROM User u WHERE u.id = :userId", User.class);
+            query.setParameter("userId", userId);
+            user = query.getSingleResult();
+            System.out.println(user);
+            session.close();
+        } catch (HibernateException e) {
+            throw new RuntimeException(e);
+        }
+        return user;
+    }
+
+    public List<User> loadAllTeachers() {
+        List<User> teachers;
+        try {
+            Session session = sessionFactory.openSession();
+            Query<User> query = session.createQuery("SELECT u FROM User u WHERE u.role = :role", User.class);
+            query.setParameter("role", UserType.TEACHER);
+            teachers = query.getResultList();
+            System.out.println(teachers);
+            session.close();
+        } catch (HibernateException e) {
+            throw new RuntimeException(e);
+        }
+        return teachers;
+    }
 }

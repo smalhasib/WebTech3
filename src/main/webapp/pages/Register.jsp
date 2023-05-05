@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+<%@ include file="/layout/header.jsp" %>
 <div class="w-[100%] h-full flex justify-center items-center">
     <div class="w-[55%] flex justify-between flex-row-reverse items-start p-3 mb-10">
         <div class="w-full">
@@ -26,6 +27,10 @@
                 <div class="w-full flex flex-col items-start">
                     <span class="text-xl font-bold text-[#142580]">Name</span>
                     <input type="text" placeholder="Name" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                </div>
+                <div class="w-full flex flex-col items-start mt-4">
+                    <span class="text-xl font-bold text-[#142580]">Email</span>
+                    <input type="text" placeholder="username" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                 </div>
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl font-bold text-[#142580]">Username</span>

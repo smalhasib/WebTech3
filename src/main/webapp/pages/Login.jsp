@@ -10,8 +10,13 @@
 <head>
     <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
+<%@ include file="/layout/header.jsp" %>
 <div class="w-[100%] h-full flex justify-center items-center">
     <div class="w-[50%] flex justify-between items-start p-3 mb-20">
         <div class="w-full">

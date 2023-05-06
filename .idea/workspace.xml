@@ -10,26 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c5b0dbc-62df-4708-9eb6-071cce6bc7e5" name="Changes" comment="User">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Courses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Create.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/Admin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/Courses.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/CreateCourse.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/SingleCourse.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/Student.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/Teacher.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/About.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/features.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/Footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/Footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +198,9 @@
       <workItem from="1683207858569" duration="15754000" />
       <workItem from="1683263315714" duration="3358000" />
       <workItem from="1683278960148" duration="4920000" />
-      <workItem from="1683286373696" duration="28787000" />
+      <workItem from="1683286373696" duration="28910000" />
+      <workItem from="1683351944532" duration="118000" />
+      <workItem from="1683382475832" duration="1676000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1683104494422</created>

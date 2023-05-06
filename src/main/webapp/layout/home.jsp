@@ -10,7 +10,7 @@
         <div class="w-full flex flex-col justify-center mb-20 p-16">
             <h1 class="text-[4rem] font-bold text-[#142580]">Online Learning!!</h1>
             <p class="text-lg leading-7 text-[#394867] px-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci at eum magni nesciunt nulla quam reprehenderit sunt temporibus.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
         </div>
         <div class="w-full flex justify-end p-5">

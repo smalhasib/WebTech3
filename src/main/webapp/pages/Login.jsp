@@ -27,19 +27,19 @@
             <div class="w-full flex justify-center">
                 <h1 class="text-3xl font-bold text-[#142580]">Signin</h1>
             </div>
-            <div class="w-full flex flex-col items-start mt-5">
+            <form method="POST" action="login" class="w-full flex flex-col items-start mt-5">
                 <div class="w-full flex flex-col items-start">
                     <span class="text-xl font-bold text-[#142580]">Username</span>
-                    <input type="text" placeholder="username" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <input type="text" name="username" placeholder="username" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                 </div>
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl font-bold text-[#142580]">Password</span>
-                    <input type="password" placeholder="*******" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <input type="password" name="password" placeholder="*******" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                 </div>
                 <div class="w-full flex justify-center">
-                    <button class="border-none w-[200px] py-2 px-4 bg-[#142580] text-xl text-white rounded-md mt-5">Signin</button>
+                    <button type="submit" class="border-none w-[200px] py-2 px-4 bg-[#142580] text-xl text-white rounded-md mt-5">Signin</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

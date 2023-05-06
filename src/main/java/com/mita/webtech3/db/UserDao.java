@@ -40,12 +40,12 @@ public class UserDao {
         }
     }
 
-    public User loginUser(String email, String password) {
+    public User loginUser(String username, String password) {
         User user;
         try {
             Session session = sessionFactory.openSession();
-            TypedQuery<User> query = session.createQuery("SELECT u FROM User u WHERE u.email = :email AND u.password = :password", User.class);
-            query.setParameter("email", email);
+            TypedQuery<User> query = session.createQuery("SELECT u FROM User u WHERE u.username = :username AND u.password = :password", User.class);
+            query.setParameter("username", username);
             query.setParameter("password", password);
             user = query.getSingleResult();
             System.out.println(user);
@@ -76,7 +76,7 @@ public class UserDao {
         try {
             Session session = sessionFactory.openSession();
             Query<User> query = session.createQuery("SELECT u FROM User u WHERE u.role = :role", User.class);
-            query.setParameter("role", UserType.TEACHER);
+            query.setParameter("role", "Teacher");
             teachers = query.getResultList();
             System.out.println(teachers);
             session.close();
@@ -84,5 +84,20 @@ public class UserDao {
             throw new RuntimeException(e);
         }
         return teachers;
+    }
+
+    public List<User> loadAllStudents() {
+        List<User> students;
+        try {
+            Session session = sessionFactory.openSession();
+            Query<User> query = session.createQuery("SELECT u FROM User u WHERE u.role = :role", User.class);
+            query.setParameter("role", "Student");
+            students = query.getResultList();
+            System.out.println(students);
+            session.close();
+        } catch (HibernateException e) {
+            throw new RuntimeException(e);
+        }
+        return students;
     }
 }

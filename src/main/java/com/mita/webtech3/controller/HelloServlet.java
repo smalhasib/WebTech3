@@ -32,14 +32,14 @@ public class HelloServlet extends HttpServlet {
             CourseDao dao = CourseDao.getInstance();
             UserDao userDao = UserDao.getInstance();
             EnrollmentDao enrollmentDao = EnrollmentDao.getInstance();
-            User user = User.builder().id(20).username("student15").email("e20").password("p20").department(Department.CSE).role(UserType.STUDENT).build();
-            User teacher = User.builder().id(6).username("teacher4").email("e6").password("p6").department(Department.CSE).role(UserType.TEACHER).build();
-            Course course = Course.builder().id(4).name("OOP").teacher(teacher).department(Department.CSE).build();
+//            User user = User.builder().id(20).username("student15").email("e20").password("p20").department(Department.CSE).role(UserType.STUDENT).build();
+//            User teacher = User.builder().id(6).username("teacher4").email("e6").password("p6").department(Department.CSE).role(UserType.TEACHER).build();
+//            Course course = Course.builder().id(4).name("OOP").teacher(teacher).department(Department.CSE).build();
 //            dao.addCourse(course);
 //            dao.loadCoursesByTeacherId(user);
 //            dao.loadCoursesById(3);
-            Enrollment enrollment = Enrollment.builder().course(course).student(user).build();
-            enrollmentDao.addEnrollment(enrollment);
+//            Enrollment enrollment = Enrollment.builder().course(course).student(user).build();
+//            enrollmentDao.addEnrollment(enrollment);
 //            enrollmentDao.coursesByStudentId(7);
         } catch (HibernateException e) {
             throw new RuntimeException(e);

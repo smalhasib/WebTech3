@@ -10,6 +10,10 @@
 <head>
     <title>Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
 <%@ include file="/layout/header.jsp" %>
@@ -23,33 +27,33 @@
             <div class="w-full flex justify-center">
                 <h1 class="text-3xl font-bold text-[#142580]">Signup</h1>
             </div>
-            <div class="w-full flex flex-col items-start mt-5">
+            <form method="POST" action="register" class="w-full flex flex-col items-start mt-5">
                 <div class="w-full flex flex-col items-start">
                     <span class="text-xl font-bold text-[#142580]">Name</span>
-                    <input type="text" placeholder="Name" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <input type="text" placeholder="Name" name="name" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                 </div>
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl font-bold text-[#142580]">Email</span>
-                    <input type="text" placeholder="username" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <input type="text" placeholder="email" name="email" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                 </div>
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl font-bold text-[#142580]">Username</span>
-                    <input type="text" placeholder="username" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <input type="text" placeholder="username" name="username" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                 </div>
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl font-bold text-[#142580]">Password</span>
-                    <input type="password" placeholder="*******" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <input type="password" placeholder="*******" name="password" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                 </div>
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl font-bold text-[#142580]">Role</span>
-                    <select name="Role" id="role" class="w-full mt-2 bg-white border-[1px] border-[#9BA4B5] p-2 px-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <select name="role" class="w-full mt-2 bg-white border-[1px] border-[#9BA4B5] p-2 px-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                         <option value="Student">Student</option>
-                        <option value="Techer">Teacher</option>
+                        <option value="Teacher">Teacher</option>
                     </select>
                 </div>
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl font-bold text-[#142580]">Department</span>
-                    <select name="Role" id="role" class="w-full mt-2 bg-white border-[1px] border-[#9BA4B5] p-2 px-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <select name="department" class="w-full mt-2 bg-white border-[1px] border-[#9BA4B5] p-2 px-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
                         <option value="CSE">CSE</option>
                         <option value="EEE">EEE</option>
                         <option value="SWE">SWE</option>
@@ -59,9 +63,9 @@
                     </select>
                 </div>
                 <div class="w-full flex justify-center">
-                    <button class="border-none w-[200px] py-2 px-4 bg-[#142580] text-xl text-white rounded-md mt-5">Signup</button>
+                    <button type="submit" class="border-none w-[200px] py-2 px-4 bg-[#142580] text-xl text-white rounded-md mt-5">Signup</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Admin</title>
@@ -15,23 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
+<%@ include file="/layout/header.jsp" %>
 <div class="w-full">
-    <%--Header part.....--%>
-    <div class="w-full flex justify-center items-center shadow-md">
-        <div class="w-[70%] p-4 flex justify-between items-center ">
-            <div class="w-full flex items-center gap-4">
-                <h1 style="font-family: 'Lobster'" class="text-3xl text-[#142580] font-bold">Learn-Online</h1>
-            </div>
-            <ul class="w-full flex justify-end gap-20 items-center decoration-none">
-                <li><a href="/create" class="text-lg font-bold text-[#142580]">Create Course</a></li>
-                <li><a href="/courses" class="text-lg font-bold text-[#142580]">Courses</a></li>
-                <li><a href="/admin" class="text-lg font-bold text-[#142580]">
-                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://img.freepik.com/premium-psd/3d-rendering-graduation-male-avatar_52659-1060.jpg?w=826" alt="Bordered avatar">
-                </a></li>
-            </ul>
-        </div>
-    </div>
-
     <%-- short details with search bar...--%>
     <div style="border-bottom-left-radius: 6rem" class="w-full h-[35vh] bg-[#142580] flex justify-center items-center">
         <div class="w-[80%] flex justify-center items-center p-3">
@@ -59,7 +45,7 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="block text-2xl font-bold">6</span>
+                    <span class="block text-2xl font-bold">${allStudents.size()}</span>
                     <span class="block text-gray-500">Students</span>
                 </div>
             </div>
@@ -71,7 +57,7 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="block text-2xl font-bold">6</span>
+                    <span class="block text-2xl font-bold">${allTeachers.size()}</span>
                     <span class="block text-gray-500">Teachers</span>
                 </div>
             </div>
@@ -82,7 +68,7 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="block text-2xl font-bold">6</span>
+                    <span class="block text-2xl font-bold">${allCourses.size()}</span>
                     <span class="block text-gray-500">Total Courses</span>
                 </div>
             </div>
@@ -105,9 +91,6 @@
                        Name
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Registration
-                    </th>
-                    <th scope="col" class="px-6 py-3">
                         Department
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -119,24 +102,22 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="bg-white border-b hover:bg-gray-50">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                       Hasibul Islam Shanto
-                    </th>
-                    <td class="px-6 py-4">
-                        2018331078
-                    </td>
-                    <td class="px-6 py-4">
-                        CSE
-                    </td>
-                    <td class="px-6 py-4">
-                        shanto78
-                    </td>
-                    <td class="px-6 py-4">
-                        shanto78@gmail.com
-                    </td>
-                </tr>
-
+                <c:forEach items="${allStudents}" var="student">
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                           ${student.name}
+                        </th>
+                        <td class="px-6 py-4">
+                            ${student.department}
+                        </td>
+                        <td class="px-6 py-4">
+                            ${student.username}
+                        </td>
+                        <td class="px-6 py-4">
+                            ${student.email}
+                        </td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
         </div>
@@ -170,19 +151,22 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="bg-white border-b hover:bg-gray-50">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                            Hasibul Islam Shanto
-                        </th>
-                        <td class="px-6 py-4">
-                            CSE
-                        </td>
-                        <td class="px-6 py-4">
-                            shanto78
-                        </td>
-                        <td class="px-6 py-4">
-                            shanto78@gmail.com
-                        </td>
+                    <c:forEach items="${allTeachers}" var="teacher">
+                        <tr class="bg-white border-b hover:bg-gray-50">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    ${teacher.name}
+                            </th>
+                            <td class="px-6 py-4">
+                                    ${teacher.department}
+                            </td>
+                            <td class="px-6 py-4">
+                                    ${teacher.username}
+                            </td>
+                            <td class="px-6 py-4">
+                                    ${teacher.email}
+                            </td>
+                        </tr>
+                    </c:forEach>
                     </tr>
 
                     </tbody>

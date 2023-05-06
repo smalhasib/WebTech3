@@ -15,20 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
+<%@ include file="/layout/header.jsp" %>
 <div class="w-full bg-white">
-    <div class="w-full flex justify-center items-center shadow-md">
-        <div class="w-[70%] p-4 flex justify-between items-center ">
-            <div class="w-full flex items-center gap-4">
-                <h1 style="font-family: 'Lobster'" class="text-3xl text-[#142580] font-bold">Learn-Online</h1>
-            </div>
-            <ul class="w-full flex justify-end gap-20 items-center decoration-none">
-                <li><a href="/student_profile" class="text-lg font-bold text-[#142580]">
-                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://img.freepik.com/premium-psd/3d-rendering-graduation-male-avatar_52659-1060.jpg?w=826" alt="Bordered avatar">
-                </a></li>
-            </ul>
-        </div>
-
-    </div>
     <div style="border-bottom-left-radius: 6rem" class="w-full h-[35vh] bg-[#142580] flex justify-center items-center">
         <div class="w-[80%] flex justify-center items-center p-3">
             <div class="w-full flex flex-col p-4">

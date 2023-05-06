@@ -21,12 +21,11 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "name", nullable = false, unique = true)
-    private String name;
+    @Column(name = "title", nullable = false, unique = true)
+    private String title;
 
-    @Column(name = "dept", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Department department;
+    @Column(name = "description", nullable = false)
+    private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "teacher_id", nullable = false)

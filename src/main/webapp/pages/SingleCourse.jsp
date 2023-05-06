@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Course</title>
@@ -16,32 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
+<%@ include file="/layout/header.jsp" %>
 <div>
-    <%--Header part.....--%>
-    <div class="w-full flex justify-center items-center shadow-md">
-        <div class="w-[70%] p-4 flex justify-between items-center ">
-            <div class="w-full flex items-center gap-4">
-                <h1 style="font-family: 'Lobster'" class="text-3xl text-[#142580] font-bold">Learn-Online</h1>
-            </div>
-            <ul class="w-full flex justify-end gap-20 items-center decoration-none">
-                <li><a href="/courses" class="text-lg font-bold text-[#142580]">Courses</a></li>
-                <li><a href="/admin" class="text-lg font-bold text-[#142580]">
-                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://img.freepik.com/premium-psd/3d-rendering-graduation-male-avatar_52659-1060.jpg?w=826" alt="Bordered avatar">
-                </a></li>
-            </ul>
-        </div>
-    </div>
-
         <%-- short details with search bar...--%>
         <div style="border-bottom-left-radius: 6rem" class="w-full h-[35vh] bg-[#142580] flex justify-center items-center">
             <div class="w-[80%] flex justify-center items-center p-3">
                 <div class="w-full flex flex-col items-center p-4">
-                    <h1 class="text-[2.5rem] font-bold text-white">Course Title</h1>
-                    <p class="text-xl text-white px-4">Course Description</p>
+                    <h1 class="text-[2.5rem] font-bold text-white">${singleCourse.title}</h1>
+                    <p class="text-md leading-6 text-white px-4">${singleCourse.description}</p>
                 </div>
                 <div class="w-full flex flex-col items-center p-4">
-                    <p class="text-xl text-white px-4">Course Instructor : Dr. Farhad Rabby</p>
-                    <p class="text-xl text-white px-4">Department : CSE</p>
+                    <p class="text-xl text-white px-4">Course Instructor : ${courseTeacher.name}</p>
                 </div>
             </div>
         </div>

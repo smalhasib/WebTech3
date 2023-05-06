@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Create Course</title>
@@ -44,28 +45,27 @@
 
 <%--    Create course fields......--%>
     <div class="w-full flex justify-center items-center">
-        <div class="w-[60%] flex flex-col items-center mt-10">
+        <form method="POST" action="create" class="w-[60%] flex flex-col items-center mt-10">
             <div class="w-full flex flex-col items-start mt-4">
                 <span class="text-xl font-bold text-[#142580]">Course Title</span>
-                <input type="text" placeholder="username" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                <input type="text" placeholder="Title" name="title" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
             </div>
             <div class="w-full flex flex-col items-start mt-4">
                 <span class="text-xl font-bold text-[#142580]">Course Description</span>
-                <textarea placeholder="Description" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]"></textarea>
+                <textarea placeholder="Description" name="description" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]"></textarea>
             </div>
             <div class="w-full flex flex-col items-start mt-4">
                 <span class="text-xl font-bold text-[#142580]">Assign a Teacher</span>
-                <select name="Role" id="role" class="w-full mt-2 bg-white border-[1px] border-[#9BA4B5] p-2 px-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
-                    <option value="Student">Teacher - 1</option>
-                    <option value="Techer">Teacher - 2</option>
-                    <option value="Student">Teacher - 3</option>
-                    <option value="Techer">Teacher - 4</option>
+                <select name="teacher" class="w-full mt-2 bg-white border-[1px] border-[#9BA4B5] p-2 px-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">
+                    <c:forEach items="${teachers}" var="teacher">
+                        <option value=${teacher.id}>${teacher.name}</option>
+                    </c:forEach>
                 </select>
             </div>
             <div class="w-full flex justify-center items-center">
-                <button class="border-none w-[200px] py-4 px-6 bg-[#142580] text-xl text-white rounded-md mt-8">Create Course</button>
+                <button type="submit" class="border-none w-[200px] py-4 px-6 bg-[#142580] text-xl text-white rounded-md mt-8">Create Course</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 </body>

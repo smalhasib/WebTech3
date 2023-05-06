@@ -52,6 +52,19 @@ public class CourseDao {
         return courses;
     }
 
+    public Course loadCoursesById(int id) {
+        Course course;
+        try {
+            Session session = sessionFactory.openSession();
+            course = session.get(Course.class, id);
+            System.out.println(course);
+            session.close();
+        } catch (HibernateException e) {
+            throw new RuntimeException(e);
+        }
+        return course;
+    }
+
     public List<Course> loadCoursesByTeacherId(User user) {
         List<Course> courses;
         try {

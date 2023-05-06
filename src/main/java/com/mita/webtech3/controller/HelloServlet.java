@@ -1,7 +1,10 @@
 package com.mita.webtech3.controller;
 
 import com.mita.webtech3.db.CourseDao;
+import com.mita.webtech3.db.EnrollmentDao;
 import com.mita.webtech3.db.UserDao;
+import com.mita.webtech3.model.Course;
+import com.mita.webtech3.model.Enrollment;
 import com.mita.webtech3.model.User;
 import com.mita.webtech3.utils.Department;
 import com.mita.webtech3.utils.UserType;
@@ -28,10 +31,16 @@ public class HelloServlet extends HttpServlet {
         try {
             CourseDao dao = CourseDao.getInstance();
             UserDao userDao = UserDao.getInstance();
-            User user = User.builder().id(2).username("teacher1").email("e2").password("p2").department(Department.CSE).role(UserType.TEACHER).build();
-//            Course course = Course.builder().name("Web Tech").teacher(user).department(Department.CSE).build();
+            EnrollmentDao enrollmentDao = EnrollmentDao.getInstance();
+            User user = User.builder().id(20).username("student15").email("e20").password("p20").department(Department.CSE).role(UserType.STUDENT).build();
+            User teacher = User.builder().id(6).username("teacher4").email("e6").password("p6").department(Department.CSE).role(UserType.TEACHER).build();
+            Course course = Course.builder().id(4).name("OOP").teacher(teacher).department(Department.CSE).build();
 //            dao.addCourse(course);
-            dao.loadCoursesByTeacherId(user);
+//            dao.loadCoursesByTeacherId(user);
+//            dao.loadCoursesById(3);
+            Enrollment enrollment = Enrollment.builder().course(course).student(user).build();
+            enrollmentDao.addEnrollment(enrollment);
+//            enrollmentDao.coursesByStudentId(7);
         } catch (HibernateException e) {
             throw new RuntimeException(e);
         }

@@ -1,12 +1,13 @@
 package com.mita.webtech3.model;
 
-import com.mita.webtech3.utils.Department;
-import com.mita.webtech3.utils.UserType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Builder
@@ -36,4 +37,7 @@ public class User {
 
     @Column(name = "role", nullable = false)
     private String role;
+
+    @OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<Enrollment> enrollments = new HashSet<>();
 }

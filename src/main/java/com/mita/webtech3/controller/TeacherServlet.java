@@ -1,5 +1,6 @@
 package com.mita.webtech3.controller;
 
+import com.mita.webtech3.db.CourseDao;
 import com.mita.webtech3.model.User;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -19,6 +20,8 @@ public class TeacherServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("loggedInUser");
         if (user != null && user.getRole().compareTo("Teacher") == 0) {
+            CourseDao courseDao = CourseDao.getInstance();
+            request.setAttribute("courses", courseDao.loadCoursesByTeacherId(user.getId()));
             RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Teacher.jsp");
             dispatcher.forward(request, response);
         } else {

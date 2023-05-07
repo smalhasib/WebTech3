@@ -1,7 +1,6 @@
 package com.mita.webtech3.db;
 
 import com.mita.webtech3.model.Course;
-import com.mita.webtech3.model.User;
 import com.mita.webtech3.utils.FactoryProvider;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -65,12 +64,12 @@ public class CourseDao {
         return course;
     }
 
-    public List<Course> loadCoursesByTeacherId(User user) {
+    public List<Course> loadCoursesByTeacherId(int userId) {
         List<Course> courses;
         try {
             Session session = sessionFactory.openSession();
-            Query<Course> query = session.createQuery("SELECT u FROM Course u WHERE u.teacher = :user", Course.class);
-            query.setParameter("user", user);
+            Query<Course> query = session.createQuery("SELECT u FROM Course u WHERE u.teacher.id = :userId", Course.class);
+            query.setParameter("userId", userId);
             courses = query.getResultList();
             System.out.println(courses);
             session.close();

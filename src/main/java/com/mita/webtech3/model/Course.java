@@ -1,6 +1,5 @@
 package com.mita.webtech3.model;
 
-import com.mita.webtech3.utils.Department;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,9 +30,6 @@ public class Course {
     @JoinColumn(name = "teacher_id", nullable = false)
     private User teacher;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "enrollments",
-            joinColumns = @JoinColumn(name = "course_id"),
-            inverseJoinColumns = @JoinColumn(name = "student_id"))
-    private Set<User> students = new HashSet<>();
+    @OneToMany(mappedBy = "course", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Enrollment> enrollments = new HashSet<>();
 }

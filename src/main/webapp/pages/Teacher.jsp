@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Teacher</title>
@@ -40,23 +41,18 @@
         </div>
         <div class="w-[80%] grid grid-cols-3 gap-20 mt-4 p-5">
 
-            <div style="border-top-left-radius: 100px" class="min-w-[300px] flex flex-col justify-center items-center shadow-md pb-5">
-                <div style="border-top-left-radius: 100px" class="bg-[#142580] h-[200px] w-full"></div>
-                <div class="w-full flex flex-col justify-center items-center p-3">
-                    <h1 class="text-lg font-bold">Computer Security</h1>
-                    <p class="text-l text-gray-700 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis perspiciatis quam quibusdam quisquam quo recusandae, saepe soluta! Aliquam, reprehenderit.</p>
+            <c:forEach items="${courses}" var="course">
+                <div style="border-top-left-radius: 100px"
+                     class="min-w-[300px] flex flex-col justify-center items-center shadow-md pb-5">
+                    <div style="border-top-left-radius: 100px" class="bg-[#142580] h-[200px] w-full"></div>
+                    <div class="w-full flex flex-col justify-center items-center p-3">
+                        <h1 class="text-lg font-bold">${course.title}</h1>
+                        <p class="text-l text-gray-700 mt-3">${course.description}</p>
+                    </div>
+                    <a href="/single-course?id=${course.id}"
+                       class="border-none px-10 py-2 bg-[#142580] text-lg text-white rounded-md mt-4">Details</a>
                 </div>
-                <button class="border-none px-10 py-3 bg-[#142580] text-xl text-white rounded-md mt-4">Show</button>
-            </div>
-
-            <div style="border-top-left-radius: 100px" class="min-w-[300px] flex flex-col justify-center items-center shadow-md pb-5">
-                <div style="border-top-left-radius: 100px" class="bg-[#142580] h-[200px] w-full"></div>
-                <div class="w-full flex flex-col justify-center items-center p-3">
-                    <h1 class="text-lg font-bold">Computer Security</h1>
-                    <p class="text-l text-gray-700 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis perspiciatis quam quibusdam quisquam quo recusandae, saepe soluta! Aliquam, reprehenderit.</p>
-                </div>
-                <button class="border-none px-10 py-3 bg-[#142580] text-xl text-white rounded-md mt-4">Show</button>
-            </div>
+            </c:forEach>
         </div>
     </div>
 </body>

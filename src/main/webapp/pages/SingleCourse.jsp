@@ -49,9 +49,6 @@
                             Name
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Registration
-                        </th>
-                        <th scope="col" class="px-6 py-3">
                             Department
                         </th>
                         <th scope="col" class="px-6 py-3">
@@ -62,26 +59,24 @@
                         </th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr class="bg-white border-b hover:bg-gray-50">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                            Hasibul Islam Shanto
-                        </th>
-                        <td class="px-6 py-4">
-                            2018331078
-                        </td>
-                        <td class="px-6 py-4">
-                            CSE
-                        </td>
-                        <td class="px-6 py-4">
-                            shanto78
-                        </td>
-                        <td class="px-6 py-4">
-                            shanto78@gmail.com
-                        </td>
-                    </tr>
-
-                    </tbody>
+                    <c:forEach items="${enrolledStudents}" var="student">
+                        <tbody>
+                        <tr class="bg-white border-b hover:bg-gray-50">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    ${student.name}
+                            </th>
+                            <td class="px-6 py-4">
+                                    ${student.department}
+                            </td>
+                            <td class="px-6 py-4">
+                                    ${student.username}
+                            </td>
+                            <td class="px-6 py-4">
+                                    ${student.email}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </c:forEach>
                 </table>
             </div>
         </div>

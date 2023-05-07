@@ -8,9 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.HashSet;
-import java.util.Set;
-
 @Data
 @Builder
 @NoArgsConstructor
@@ -22,6 +19,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "name", nullable = false, unique = true)
+    private String name;
+
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
@@ -32,13 +32,8 @@ public class User {
     private String password;
 
     @Column(name = "department")
-    @Enumerated(EnumType.STRING)
-    private Department department;
+    private String department;
 
     @Column(name = "role", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private UserType role;
-
-    @OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<Enrollment> enrollments = new HashSet<>();
+    private String role;
 }

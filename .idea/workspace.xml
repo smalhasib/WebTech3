@@ -10,35 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c5b0dbc-62df-4708-9eb6-071cce6bc7e5" name="Changes" comment="User">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/CreateCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/RegisterServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/SingleCourseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/CoursesServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Create.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Register.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/StudentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/TeacherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/features.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/features.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Courses.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/CreateCourse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/CreateCourse.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/SingleCourse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/SingleCourse.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Student.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Teacher.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,6 +1,8 @@
 package com.mita.webtech3.db;
 
+import com.mita.webtech3.model.Course;
 import com.mita.webtech3.model.Enrollment;
+import com.mita.webtech3.model.User;
 import com.mita.webtech3.utils.FactoryProvider;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -37,18 +39,33 @@ public class EnrollmentDao {
         }
     }
 
-    public void coursesByStudentId(int studentId) {
-        List<Enrollment> courses;
+    public List<Course> coursesByStudentId(int studentId) {
+        List<Course> courses;
         try {
             Session session = sessionFactory.openSession();
-            Query<Enrollment> query = session.createQuery("FROM Enrollment", Enrollment.class);
-//            query.setParameter("studentId", studentId);
-            courses = query.getResultList();
+            Query<Enrollment> query = session.createQuery("SELECT e FROM Enrollment e WHERE e.student.id = :studentId", Enrollment.class);
+            query.setParameter("studentId", studentId);
+            courses = query.getResultList().stream().map(Enrollment::getCourse).toList();
             System.out.println(courses);
             session.close();
         } catch (HibernateException e) {
             throw new RuntimeException(e);
         }
-        //return courses;
+        return courses;
+    }
+
+    public List<User> studentsByCourseId(int courseId) {
+        List<User> students;
+        try {
+            Session session = sessionFactory.openSession();
+            Query<Enrollment> query = session.createQuery("SELECT e FROM Enrollment e WHERE e.course.id = :courseId", Enrollment.class);
+            query.setParameter("courseId", courseId);
+            students = query.getResultList().stream().map(Enrollment::getStudent).toList();
+            System.out.println(students);
+            session.close();
+        } catch (HibernateException e) {
+            throw new RuntimeException(e);
+        }
+        return students;
     }
 }

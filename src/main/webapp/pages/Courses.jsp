@@ -48,9 +48,17 @@
                         <h1 class="text-lg font-bold">${course.title}</h1>
                         <p class="text-l text-gray-700 mt-3">${course.description}</p>
                     </div>
-                    <div class="w-full flex justify-center gap-10">
-                        <a href="/course/${course.id}" class="border-none px-10 py-2 bg-[#142580] text-lg text-white rounded-md mt-4">Details</a>
-                        <button class="border-none px-10 py-2 bg-[#142580] text-lg text-white rounded-md mt-4">Enroll</button>
+                    <div class="w-full flex justify-center">
+                        <c:if test="${loggedInUser.role == 'Teacher'}">
+                            <a href="single-course?id=${course.id}" class="border-none px-10 py-2 bg-[#142580] text-lg text-white rounded-md mt-4">Details</a>
+                        </c:if>
+                        <c:if test="${loggedInUser.role == 'Admin'}">
+                            <a href="single-course?id=${course.id}" class="border-none px-10 py-2 bg-[#142580] text-lg text-white rounded-md mt-4">Details</a>
+                        </c:if>
+                          <c:if test="${loggedInUser.role == 'Student'}">
+                              <a href="enroll?id=${course.id}" class="border-none px-10 py-2 bg-[#142580] text-lg text-white rounded-md mt-4">Enroll</a>
+                          </c:if>
+
                     </div>
                 </div>
             </c:forEach>

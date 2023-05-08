@@ -48,7 +48,6 @@
                     <h1 class="text-lg font-bold">Computer Security</h1>
                     <p class="text-l text-gray-700 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis perspiciatis quam quibusdam quisquam quo recusandae, saepe soluta! Aliquam, reprehenderit.</p>
                 </div>
-                <button class="border-none px-10 py-3 bg-[#142580] text-xl text-white rounded-md mt-4">Show</button>
             </div>
 
             <div style="border-top-left-radius: 100px" class="min-w-[300px] flex flex-col justify-center items-center shadow-md pb-5">
@@ -57,7 +56,6 @@
                     <h1 class="text-lg font-bold">Computer Security</h1>
                     <p class="text-l text-gray-700 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis perspiciatis quam quibusdam quisquam quo recusandae, saepe soluta! Aliquam, reprehenderit.</p>
                 </div>
-                <button class="border-none px-10 py-3 bg-[#142580] text-xl text-white rounded-md mt-4">Show</button>
             </div>
         </div>
 </div>

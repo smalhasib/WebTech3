@@ -35,6 +35,7 @@ public class SingleCourseServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/SingleCourse.jsp");
             dispatcher.forward(request, response);
         } else {
+            session.setAttribute("loggedInUser", null);
             response.sendRedirect("/login");
         }
     }

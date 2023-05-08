@@ -49,7 +49,7 @@
                         <h1 class="text-lg font-bold">${course.title}</h1>
                         <p class="text-l text-gray-700 mt-3">${course.description}</p>
                     </div>
-                    <a href="/single-course?id=${course.id}"
+                    <a href="single-course?id=${course.id}"
                        class="border-none px-10 py-2 bg-[#142580] text-lg text-white rounded-md mt-4">Details</a>
                 </div>
             </c:forEach>

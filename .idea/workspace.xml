@@ -10,17 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c5b0dbc-62df-4708-9eb6-071cce6bc7e5" name="Changes" comment="User">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/EnrollServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/SingleCourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/SingleCourseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/TeacherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/TeacherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/CourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/EnrollmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/EnrollmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/SingleCourse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/SingleCourse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Courses.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Student.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Teacher.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Teacher.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +47,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2NlhWQRFR1KGM0F7DOUK8Ob8jqM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -98,7 +97,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
@@ -215,6 +214,7 @@
       <workItem from="1683382475832" duration="1676000" />
       <workItem from="1683447767952" duration="749000" />
       <workItem from="1683495827564" duration="226000" />
+      <workItem from="1683561375898" duration="6221000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1683104494422</created>

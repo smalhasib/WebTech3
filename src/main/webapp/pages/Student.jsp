@@ -34,30 +34,24 @@
         </div>
     </div>
 
-<%--    Enrolled courses here....--%>
+    <%--    Enrolled courses here....--%>
     <div class="w-full flex flex-col justify-center items-center">
         <div class="flex flex-col justify-center items-center mt-5">
             <h1 class="text-[2rem] font-bold text-[#142580]">Enrolled Courses</h1>
             <div class="w-[180px] h-[5px] bg-[#142580]"></div>
         </div>
         <div class="w-[80%] grid grid-cols-3 gap-20 mt-4 p-5">
-
-            <div style="border-top-left-radius: 100px" class="min-w-[300px] flex flex-col justify-center items-center shadow-md pb-5">
-                <div style="border-top-left-radius: 100px" class="bg-[#142580] h-[200px] w-full"></div>
-                <div class="w-full flex flex-col justify-center items-center p-3">
-                    <h1 class="text-lg font-bold">Computer Security</h1>
-                    <p class="text-l text-gray-700 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis perspiciatis quam quibusdam quisquam quo recusandae, saepe soluta! Aliquam, reprehenderit.</p>
+            <c:forEach items="${enrolledCourses}" var="course">
+                <div style="border-top-left-radius: 100px"
+                     class="min-w-[300px] flex flex-col justify-center items-center shadow-md pb-5">
+                    <div style="border-top-left-radius: 100px" class="bg-[#142580] h-[200px] w-full"></div>
+                    <div class="w-full flex flex-col justify-center items-center p-3">
+                        <h1 class="text-lg font-bold">${course.title}</h1>
+                        <p class="text-l text-gray-700 mt-3">${course.description}</p>
+                    </div>
                 </div>
-            </div>
-
-            <div style="border-top-left-radius: 100px" class="min-w-[300px] flex flex-col justify-center items-center shadow-md pb-5">
-                <div style="border-top-left-radius: 100px" class="bg-[#142580] h-[200px] w-full"></div>
-                <div class="w-full flex flex-col justify-center items-center p-3">
-                    <h1 class="text-lg font-bold">Computer Security</h1>
-                    <p class="text-l text-gray-700 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis perspiciatis quam quibusdam quisquam quo recusandae, saepe soluta! Aliquam, reprehenderit.</p>
-                </div>
-            </div>
+            </c:forEach>
         </div>
-</div>
+    </div>
 </body>
 </html>

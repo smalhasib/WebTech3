@@ -1,6 +1,6 @@
 package com.mita.webtech3.controller;
 
-import com.mita.webtech3.db.CourseDao;
+import com.mita.webtech3.db.EnrollmentDao;
 import com.mita.webtech3.model.Course;
 import com.mita.webtech3.model.User;
 import jakarta.servlet.RequestDispatcher;
@@ -19,13 +19,13 @@ public class StudentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        CourseDao courseDao = CourseDao.getInstance();
-        List<Course> courses = courseDao.AllCourses();
-        request.setAttribute("allCourses",courses);
-
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("loggedInUser");
+
         if (user != null && user.getRole().compareTo("Student") == 0) {
+            List<Course> courses = EnrollmentDao.getInstance().coursesByStudentId(user.getId());
+            request.setAttribute("enrolledCourses", courses);
+
             RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Student.jsp");
             dispatcher.forward(request, response);
         } else {

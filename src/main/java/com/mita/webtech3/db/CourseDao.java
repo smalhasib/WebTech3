@@ -37,6 +37,21 @@ public class CourseDao {
         }
     }
 
+    public List<Course> availableCourses(int studentId) {
+        List<Course> courses;
+        try {
+            Session session = sessionFactory.openSession();
+            Query<Course> query = session.createQuery("SELECT c FROM Course c WHERE c.id NOT IN (SELECT e.course.id FROM Enrollment e WHERE e.student.id = :studentId)", Course.class);
+            query.setParameter("studentId", studentId);
+            courses = query.getResultList();
+            System.out.println(courses);
+            session.close();
+        } catch (HibernateException e) {
+            throw new RuntimeException(e);
+        }
+        return courses;
+    }
+
     public List<Course> AllCourses() {
         List<Course> courses;
         try {

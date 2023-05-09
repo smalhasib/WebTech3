@@ -12,10 +12,10 @@
     <list default="true" id="0c5b0dbc-62df-4708-9eb6-071cce6bc7e5" name="Changes" comment="User">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/EnrollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/EnrollServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/StudentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/CoursesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/controller/CoursesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mita/webtech3/db/CourseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/Student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Student.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,9 +95,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+    <configuration name="Tomcat 10.1.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="WebTech3:war exploded">
@@ -215,6 +213,10 @@
       <workItem from="1683561375898" duration="6221000" />
       <workItem from="1683564866091" duration="258000" />
       <workItem from="1683565805660" duration="1892000" />
+      <workItem from="1683615129676" duration="530000" />
+      <workItem from="1683646121695" duration="6000" />
+      <workItem from="1683646160418" duration="1008000" />
+      <workItem from="1683649479359" duration="3334000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1683104494422</created>

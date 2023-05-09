@@ -18,25 +18,28 @@ import java.util.List;
 public class CoursesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        CourseDao courseDao = CourseDao.getInstance();
-        List<Course> courses = courseDao.AllCourses();
-        request.setAttribute("allCourses",courses);
-
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("loggedInUser");
-        if (user != null && user.getRole().compareTo("Admin") == 0) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Courses.jsp");
-            dispatcher.forward(request, response);
-        }
-        if (user != null && user.getRole().compareTo("Teacher") == 0) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Courses.jsp");
-            dispatcher.forward(request, response);
-        }
-        if (user != null && user.getRole().compareTo("Student") == 0) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Courses.jsp");
-            dispatcher.forward(request, response);
-        } else {
-            response.sendRedirect("/login");
+
+        if (user != null) {
+            CourseDao courseDao = CourseDao.getInstance();
+            List<Course> courses = courseDao.availableCourses(user.getId());
+            request.setAttribute("allCourses",courses);
+
+            if (user.getRole().compareTo("Admin") == 0) {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Courses.jsp");
+                dispatcher.forward(request, response);
+            }
+            if (user.getRole().compareTo("Teacher") == 0) {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Courses.jsp");
+                dispatcher.forward(request, response);
+            }
+            if (user.getRole().compareTo("Student") == 0) {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/Courses.jsp");
+                dispatcher.forward(request, response);
+            } else {
+                response.sendRedirect("/login");
+            }
         }
     }
 }
